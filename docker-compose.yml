@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+  nginx:
+    image: nginx-owasp:latest
+    container_name: nginx-owasp
+    restart: always
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - './nginx:/etc/nginx'
